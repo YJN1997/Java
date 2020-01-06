@@ -1,0 +1,10 @@
+com: 
+  Trainig:
+    demo: 
+      application-name: "TR"
+      version: 2
+      in-memory-no-dlp:
+        enabled: false
+      in-memory:
+        enabled: false 
+      

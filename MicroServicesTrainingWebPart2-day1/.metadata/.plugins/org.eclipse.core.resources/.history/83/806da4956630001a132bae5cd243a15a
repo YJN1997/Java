@@ -1,0 +1,19 @@
+package com.trainning.session2.adapter.rest;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DemoRestAppleaction {
+	@GetMapping("/greeting")
+	public String greeting(@RequestParam("name") String name) {
+		return "Hello,"+name+"!";
+	}
+	
+	@GetMapping("/{userId}/greeting")
+	public String greetingById(@RequestParam("name") String name , @PathVariable("userId") int userId) {
+		return "Hello,"+name+":"+userId;
+	}
+}

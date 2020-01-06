@@ -1,0 +1,12 @@
+package com.trainning.session2.adapter.repositry;
+
+import java.util.Optional;
+
+import com.trainning.session2.adapter.entity.User;
+;
+
+public interface UserManagment {
+	public void addUser(User user);
+	public Optional<User> getUserById(String id);
+	public boolean deleteUserById(String id);
+}

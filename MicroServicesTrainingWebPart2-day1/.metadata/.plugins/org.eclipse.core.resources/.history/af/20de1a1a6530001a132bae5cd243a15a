@@ -1,0 +1,37 @@
+package com.trainning.session2.repositryImp;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import com.trainning.session2.adapter.model.User;
+import com.trainning.session2.adapter.repositry.UserManagment;
+
+public class UserManagmentImp implements UserManagment{
+
+	List<User> users = new ArrayList<User>();
+	@Override
+	public void addUser(User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Optional<User> getUserById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean deleteUserById(String id) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public void addUser(com.trainning.session2.adapter.entity.User user) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

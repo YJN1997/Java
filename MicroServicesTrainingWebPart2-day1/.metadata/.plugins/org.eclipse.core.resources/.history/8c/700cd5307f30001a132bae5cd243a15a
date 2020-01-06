@@ -1,0 +1,28 @@
+package com.trainning.session2.adapter.rest;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.trainning.session2.adapter.model.User;
+import com.trainning.session2.repositryImp.UserManagmentConfigration;
+
+@RestController
+@RequestMapping("/index")
+public class DemoRestAppleaction {
+	UserManagmentConfigration user = new UserManagmentConfigration();
+	@GetMapping("/{userId}")
+	public Optional<User> getUserById(@PathVariable("userId") String userId) {
+		return user.Users().getUserById(userId);
+	}
+	
+	@GetMapping("/")
+	public List<User> getUsers() {
+		return user.Users().getUsers();
+	}
+	
+}

@@ -1,0 +1,12 @@
+package com.training.demo;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class InMemoryManagmentConfigration {
+	@Bean
+	public UserManagment inMemory(){
+		return new InMemoryUserManagment();
+	}
+}

@@ -1,0 +1,27 @@
+package com.training.demo;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.core.env.Environment;
+
+@Configuration
+public class AtStartConfigruation {
+	
+	@Bean
+	public CommandLineRunner startUp(UserManagment userManagment , Environment env) {
+		return args->{
+			System.out.println(env.getProperty("com.Trainig.demo"));
+			userManagment.addUser(new User("1","Ahmad"));
+			userManagment.printUsers();
+		};
+	}
+	
+	@Bean
+	public CommandLineRunner startUp2(UserManagment userManagment) {
+		return args->{
+			userManagment.addUser(new User("2","Mousa"));
+			userManagment.printUsers();
+		};
+	}
+}

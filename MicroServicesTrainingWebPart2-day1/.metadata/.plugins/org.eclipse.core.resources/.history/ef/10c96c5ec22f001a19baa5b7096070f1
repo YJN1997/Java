@@ -1,0 +1,5 @@
+package com.trainning.session2.adapter.repositry;
+
+public interface UserManagment {
+
+}

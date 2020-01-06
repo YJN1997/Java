@@ -1,0 +1,5 @@
+package com.trainning.session2.adapter.entity;
+
+public class User {
+
+}

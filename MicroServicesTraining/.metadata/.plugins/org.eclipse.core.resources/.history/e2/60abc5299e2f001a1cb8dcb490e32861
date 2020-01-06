@@ -1,0 +1,25 @@
+package com.training.demo;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AtStartConfigruation {
+	
+	@Bean
+	public CommandLineRunner startUp(UserManagment userManagment) {
+		return args->{
+			userManagment.addUser(new User("1","Ahmad"));
+			userManagment.printUsers();
+		};
+	}
+	
+	@Bean
+	public CommandLineRunner startUp2(UserManagment userManagment) {
+		return args->{
+			userManagment.addUser(new User("2","Mousa"));
+			userManagment.printUsers();
+		};
+	}
+}

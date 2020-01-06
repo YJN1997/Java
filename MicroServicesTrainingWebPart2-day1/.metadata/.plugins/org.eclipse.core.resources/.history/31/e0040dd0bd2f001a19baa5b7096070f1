@@ -1,0 +1,12 @@
+package com.trainning.session2.adapter.rest;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class DemoRestAppleaction {
+	@GetMapping("/greeting")
+	private String greeting() {
+		return "Hello,World!";
+	}
+}

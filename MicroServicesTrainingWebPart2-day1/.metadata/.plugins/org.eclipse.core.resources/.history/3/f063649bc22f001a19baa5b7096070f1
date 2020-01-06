@@ -1,0 +1,9 @@
+package com.trainning.session2.adapter.repositry;
+
+import org.apache.tomcat.jni.User;
+
+public interface UserManagment {
+	public void addUser(User user);
+	public Optinal<User> getUserById(String id);
+	public boolean deleteUserById( id);
+}

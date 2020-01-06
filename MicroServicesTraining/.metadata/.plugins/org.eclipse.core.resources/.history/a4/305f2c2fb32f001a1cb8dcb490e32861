@@ -1,0 +1,16 @@
+package com.training.demo;
+
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Conditional;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+@ConditionalOnProperty (prefix = "com.trainig.demo.in-memory" , name="enabled" , matchIfMissing = false)
+public class InMemoryManagmentConfigration {
+	
+	@Bean("inMemory")
+	public UserManagment inMemory(){
+		return new InMemoryUserManagment();
+	}
+}

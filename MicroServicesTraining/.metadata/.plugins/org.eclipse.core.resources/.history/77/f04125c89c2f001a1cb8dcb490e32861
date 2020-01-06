@@ -1,0 +1,22 @@
+package com.training.demo;
+
+import java.util.List;
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
+public class UserManagment {
+	List<User> users= new ArrayList<>();
+	
+	@Value("$(application-name)")
+	private String applicationName;
+	public void addUser(User user) {
+		users.add(user);
+	}
+	
+	public void printUsers() {
+		users.stream().forEach(user->System.out.println("For Appleaction"+applicationName+"\n"+user));
+	}
+}

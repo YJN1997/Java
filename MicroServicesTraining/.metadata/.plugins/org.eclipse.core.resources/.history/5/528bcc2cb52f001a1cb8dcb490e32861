@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "com.training.demo",
+      "type": "com.training.demo.ProjectConfigration",
+      "sourceType": "com.training.demo.ProjectConfigration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "com.training.demo.application-name",
+      "type": "java.lang.String",
+      "sourceType": "com.training.demo.ProjectConfigration"
+    },
+    {
+      "name": "com.training.demo.version",
+      "type": "java.lang.Integer",
+      "sourceType": "com.training.demo.ProjectConfigration"
+    }
+  ],
+  "hints": []
+}
